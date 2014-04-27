@@ -41,20 +41,15 @@ Summon someone:
 
 Stand:``` bot.stand(); ```
 
-Sit:
-```bot.sit();```
+Sit:```bot.sit();```
 
-Lie:
-```bot.lie();```
+Lie:```bot.lie();```
 
-Send the decline message to someone whom sent a request:
-```bot.decline();```
+Send the decline message to someone whom sent a request:```bot.decline();```
 
-Stop following/leading:
-```bot.stop();```
+Stop following/leading:```bot.stop();```
 
-Move a direction(1/7/9/3, nw/ne/sw/se, and maybe 4/8/6/2):
-```bot.move(mixed Direction);```
+Move a direction(1/7/9/3, nw/ne/sw/se, and maybe 4/8/6/2):```bot.move(mixed Direction);```
 
 Convert a UID to a name:
 ```bot.uid2Name(int Uid);```
