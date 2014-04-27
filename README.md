@@ -39,8 +39,7 @@ Join someone:
 Summon someone:
 ```bot.summon(string Name);```
 
-Stand:
-```bot.stand();```
+Stand:``` bot.stand(); ```
 
 Sit:
 ```bot.sit();```
