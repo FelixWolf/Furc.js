@@ -49,7 +49,7 @@ Lie:
 ```bot.lie();```
 
 Send the decline message to someone whom sent a request:
-bot.decline();```
+```bot.decline();```
 
 Stop following/leading:
 ```bot.stop();```
@@ -67,7 +67,7 @@ I forgot what this did:
 ```bot.playerLookup(string Name); //I think?```
 
 Queue the Phoenix Speak database:
-bot.ps(string Queue, function Callback(result));```
+```bot.ps(string Queue, function Callback(result));```
 
 Get a DS variable(Advanced, and probably not working):
 ```bot.getDreamVar.ds(string DS_Variable);```
