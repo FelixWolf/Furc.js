@@ -1,0 +1,5 @@
+{
+	"name"	: "Furc.js",
+	"author": "Félix Wolf",
+	"main"	: "./lib/main.js"
+}
