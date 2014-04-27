@@ -136,7 +136,7 @@ Called when a player moves:
 ```player.move: (int UID, object Player_Variables) //See next section```
 
 Called when a player "updates", either shape or color:
-``player.update: (int UID, object Player_Variables) //See next section```
+```player.update: (int UID, object Player_Variables) //See next section```
 
 Called when needing to hide a player:
 ```player.hide: (int UID, object Player_Variables) //See next section```
@@ -202,7 +202,7 @@ Called when we can share edit:
 ```share-edit.begin```
 
 Called when we can no longer share edit:
-``share-edit.end```
+```share-edit.end```
 
 Called when tabsability changes(EG: Tabs key usage)
 ```tabs: (integer True/False)```
