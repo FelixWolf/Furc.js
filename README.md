@@ -184,59 +184,41 @@ Called after calling uid:
 Called when special effects are supposed to play(READ: Dragon breath and such):
 ```vfx: (string FX, object {X: integer X, Y: integer Y})```
 
-Called when we can share edit:
-```share-edit.begin```
+Called when we can share edit:```share-edit.begin```
 
-Called when we can no longer share edit:
-```share-edit.end```
+Called when we can no longer share edit:```share-edit.end```
 
-Called when tabsability changes(EG: Tabs key usage)
-```tabs: (integer True/False)```
+Called when tabsability changes(EG: Tabs key usage)```tabs: (integer True/False)```
 
-Called when viewing user list ability changes:
-```userlist: (integer True/False)```
+Called when viewing user list ability changes:```userlist: (integer True/False)```
 
-Called when we need to add a bookmark:
-```bookmark: (integer Temporary, string DreamURL)```
+Called when we need to add a bookmark:```bookmark: (integer Temporary, string DreamURL)```
 
-Called when a player has a offset:
-```offset: (integer UID, object {X: integer X, Y: integer Y})```
+Called when a player has a offset:```offset: (integer UID, object {X: integer X, Y: integer Y})```
 
-Called when particles are supposed to display, currently no function to download/process the data:
-```pfx: None```
+Called when particles are supposed to display, currently no function to download/process the data:```pfx: None```
 
-Called when a dream has a webmap:
-```webmap: (string Map_Name, String URL)```
+Called when a dream has a webmap:```webmap: (string Map_Name, String URL)```
 
-Called when a portrait loads:
-```portrait: (integer UID, integer Portrait_ID)```
+Called when a portrait loads:```portrait: (integer UID, integer Portrait_ID)```
 
-Called when we are supposed to open a URL:
-```openurl: (string URL)```
+Called when we are supposed to open a URL:```openurl: (string URL)```
 
-Called when the parental dialog displays:
-```parental: None```
+Called when the parental dialog displays:```parental: None```
 
-Called when we receive a online status request:
-```onln: (integer True/False, string Name)```
+Called when we receive a online status request:```onln: (integer True/False, string Name)```
 
-Called when the screen flips:
-```flipscreen: (integer True/False)```
+Called when the screen flips:```flipscreen: (integer True/False)```
 
-Called when our Session ID is set:
-```sessionid: (integer SID)```
+Called when our Session ID is set:```sessionid: (integer SID)```
 
-Called when our colors change:
-```colors: (string Color_String)```
+Called when our colors change:```colors: (string Color_String)```
 
-Called when we get a popup, such as cookie request:
-```popup: (string ID, string Type, string Message)```
+Called when we get a popup, such as cookie request:```popup: (string ID, string Type, string Message)```
 
-Called WHENEVER we receive a packet:
-```data: (string Data)```
+Called WHENEVER we receive a packet:```data: (string Data)```
 
-Called when the connection dies, rip in piece:
-```end: None```
+Called when the connection dies, rip in piece:```end: None```
 
 ##Data structures:
 Positions:
