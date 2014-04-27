@@ -234,14 +234,14 @@ var
 									sys.emitter.emit("feet",sys.botvar.objAtFeet);
 								break;
 								case "~":
-									sys.emitter.emit("resume",sys.botvar.objAtFeet);
+									sys.emitter.emit("resume");
 								break;
 								case "=":
-									sys.emitter.emit("suppress",sys.botvar.objAtFeet);
+									sys.emitter.emit("suppress");
 								break;
 								case "^":
 									sys.botvar.objInPaws = utils.b95d(data.substr(1));
-									sys.emitter.emit("paws",sys.botvar.objAtFeet);
+									sys.emitter.emit("paws",sys.botvar.objInPaws);
 								break;
 								case "!": //Bots can have ears.
 									sys.emitter.emit("snd",utils.b95d(data.substr(1)));
@@ -302,7 +302,7 @@ var
 											sys.emitter.emit("update");
 										break;
 										case "z":
-											sys.emitter.emit("uid",parseInt(data.substr(2)));
+											sys.emitter.emit("uid2",parseInt(data.substr(2)));
 										break;
 										case "v":
 											sys.emitter.emit("vfx",data.substr(2,1),{
@@ -343,13 +343,13 @@ var
 											vars = data.substr(2," ");
 											sys.emitter.emit("portrait",vars[0],vars[1]);
 										break;
-										case "&":
+										case "$":
 											sys.emitter.emit("openurl",data.substr(2));
 										break;
 										case "!":
 											sys.emitter.emit("parental");
 										break;
-										case "!":
+										case "%":
 											sys.emitter.emit("onln",data.substr(2,1),data.substr(3));
 										break;
 										case "|":
