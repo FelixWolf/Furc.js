@@ -51,29 +51,21 @@ Stop following/leading:```bot.stop();```
 
 Move a direction(1/7/9/3, nw/ne/sw/se, and maybe 4/8/6/2):```bot.move(mixed Direction);```
 
-Convert a UID to a name:
-```bot.uid2Name(int Uid);```
+Convert a UID to a name:```bot.uid2Name(int Uid);```
 
-Get a list of furres in the dream:
-```bot.playerList();```
+Get a list of furres in the dream:```bot.playerList();```
 
-I forgot what this did:
-```bot.playerLookup(string Name); //I think?```
+I forgot what this did:```bot.playerLookup(string Name); //I think?```
 
-Queue the Phoenix Speak database:
-```bot.ps(string Queue, function Callback(result));```
+Queue the Phoenix Speak database:```bot.ps(string Queue, function Callback(result));```
 
-Get a DS variable(Advanced, and probably not working):
-```bot.getDreamVar.ds(string DS_Variable);```
+Get a DS variable(Advanced, and probably not working):```bot.getDreamVar.ds(string DS_Variable);```
 
-Get the floor at a specific position, only works AFTER it has been set by DS.
-```bot.getDreamVar.floorAt(integer X, integer Y);```
+Get the floor at a specific position, only works AFTER it has been set by DS.```bot.getDreamVar.floorAt(integer X, integer Y);```
 
-Get the object at a specific position, only works AFTER it has been set by DS.
-```bot.getDreamVar.objectAt(integer X, integer Y);```
+Get the object at a specific position, only works AFTER it has been set by DS.```bot.getDreamVar.objectAt(integer X, integer Y);```
 
-Get the wall at a specific position, only works AFTER it has been set by DS.
-```bot.getDreamVar.wallAt(integer X, integer Y);```
+Get the wall at a specific position, only works AFTER it has been set by DS.```bot.getDreamVar.wallAt(integer X, integer Y);```
 
 ##Event list
 THESE ARE ALL LOWER CASE
