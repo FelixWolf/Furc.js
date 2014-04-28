@@ -10,225 +10,503 @@ A way to write bots for furcadia using node.js.
 
 ##Function list
 Add a event listener:
-```bot.on(string Event_Name, function Callback([variables][,...]));```
+```javascript
+bot.on(string Event_Name, function Callback([variables][,...]));
+```
 
 Remove a event listener:
-```bot.off(string Event_Name);```
+
+```javascript
+bot.off(string Event_Name);
+```
+
 
 Get a bot variable:
-```bot.get(mixed Bot_Variable);```
+
+```javascript
+bot.get(mixed Bot_Variable);
+```
+
+
 
 Send a raw protocol packet:
-```bot.send(string Raw_String);```
+
+```javascript
+bot.send(string Raw_String);
+```
 
 Say something:
-```bot.say(string Message);```
+
+```javascript
+bot.say(string Message);
+```
 
 Emit loud a message:
-```bot.emitloud(string Message);```
+
+```javascript
+bot.emitloud(string Message);
+```
 
 Emote something:
-```bot.emote(string Message);```
+
+```javascript
+bot.emote(string Message);
+```
 
 Whisper something to someone:
-```bot.whisper(string Name, string Message);```
+
+```javascript
+bot.whisper(string Name, string Message);
+```
 
 Join someone:
-```bot.join(string Name);```
+
+```javascript
+bot.join(string Name);
+```
 
 Summon someone:
-```bot.summon(string Name);```
 
-Stand:``` bot.stand(); ```
+```javascript
+bot.summon(string Name);
+```
 
-Sit:```bot.sit();```
+Stand:
 
-Lie:```bot.lie();```
+```javascript
+ bot.stand();
+```
 
-Send the decline message to someone whom sent a request:```bot.decline();```
+Sit:
 
-Stop following/leading:```bot.stop();```
+```javascript
+bot.sit();
+```
 
-Move a direction(1/7/9/3, nw/ne/sw/se, and maybe 4/8/6/2):```bot.move(mixed Direction);```
+Lie:
 
-Convert a UID to a name:```bot.uid2Name(int Uid);```
+```javascript
+bot.lie();
+```
 
-Get a list of furres in the dream:```bot.playerList();```
+Send the decline message to someone whom sent a request:
 
-I forgot what this did:```bot.playerLookup(string Name); //I think?```
+```javascript
+bot.decline();
+```
 
-Queue the Phoenix Speak database:```bot.ps(string Queue, function Callback(result));```
+Stop following/leading:
 
-Get a DS variable(Advanced, and probably not working):```bot.getDreamVar.ds(string DS_Variable);```
+```javascript
+bot.stop();
+```
 
-Get the floor at a specific position, only works AFTER it has been set by DS.```bot.getDreamVar.floorAt(integer X, integer Y);```
+Move a direction(1/7/9/3, nw/ne/sw/se, and maybe 4/8/6/2):
 
-Get the object at a specific position, only works AFTER it has been set by DS.```bot.getDreamVar.objectAt(integer X, integer Y);```
+```javascript
+bot.move(mixed Direction);
+```
 
-Get the wall at a specific position, only works AFTER it has been set by DS.```bot.getDreamVar.wallAt(integer X, integer Y);```
+Convert a UID to a name:
+
+```javascript
+bot.uid2Name(int Uid);
+```
+
+Get a list of furres in the dream:
+
+```javascript
+bot.playerList();
+```
+
+I forgot what this did:
+
+```javascript
+bot.playerLookup(string Name); //I think?
+```
+
+Queue the Phoenix Speak database:
+
+```javascript
+bot.ps(string Queue, function Callback(result));
+```
+
+Get a DS variable(Advanced, and probably not working):
+```javascript
+bot.getDreamVar.ds(string DS_Variable);
+```
+<br/>
+
+#####Note: These last three only work AFTER it has been set by DS or live-edit.
+
+Get the floor at a specific position:
+
+```javascript
+bot.getDreamVar.floorAt(integer X, integer Y);
+```
+
+Get the object at a specific position:
+
+```javascript
+bot.getDreamVar.objectAt(integer X, integer Y);
+```
+
+Get the wall at a specific position:
+
+```javascript
+bot.getDreamVar.wallAt(integer X, integer Y);
+```
 
 ##Event list
 THESE ARE ALL LOWER CASE
 
 Called when connecting:
-```connect: ()```
+
+```javascript
+connect: ()
+```
 
 Called when logging in:
-```login: ()```
+
+```javascript
+login: ()
+```
 
 Called when successfully logged in:
-```success: ()```
+
+```javascript
+success: ()
+```
 
 Called when failed to log in:
-```failed: (string Message)```
+
+```javascript
+failed: (string Message)
+```
 
 Called when any text should be displayed to the client:
-```text: (string Message)```
+
+```javascript
+text: (string Message)
+```
 
 Called when receiving a whisper:
-```whisper: (string Name, string ShortName, string Message)```
+
+```javascript
+whisper: (string Name, string ShortName, string Message)```
 
 Called when receiving a PS command response:
-```ps_raw: (string Response)```
+
+```javascript
+ps_raw: (string Response)
+```
 
 Called when receiving a PS command response that is handled by a callback:
-```ps_id: (integer Callback_ID, string Message)```
+
+```javascript
+ps_id: (integer Callback_ID, string Message)
+```
 
 Called when a dragonspeak emit was heard:
-```dragonspeak: (string Message)```
+
+```javascript
+dragonspeak: (string Message)
+```
 
 Called when ANY emit is heard:
-```emit: (string Message)```
 
-Called when a DS emit with @ in front of it is heard(Useful for processing bot only emits):
-```botcmd: (string Message) //May change in the future```
+```javascript
+emit: (string Message)
+```
+
+Called when a DS emit with `@` in front of it is heard(Useful for processing bot only emits):
+
+```javascript
+botcmd: (string Message) //May change in the future
+```
 
 Called when a player emitlouds/emits something:
-```playeremit: (string Message)```
+
+```javascript
+playeremit: (string Message)
+```
 
 Called when a system message is heard:
-```system: (string Message)```
+
+```javascript
+system: (string Message)
+```
 
 Called when hearing someone chat:
-```chat: (string Message)```
+
+```javascript
+chat: (string Message)
+```
 
 Called when we didn't handle it with any of the above, only useful for debugging:
-```msg: (string Message)```
+
+```javascript
+msg: (string Message)
+```
 
 Called when a player spawns:
-```player.spawn: (int UID, object Player_Variables) //See next section```
+
+```javascript
+player.spawn: (int UID, object Player_Variables) //See next section
+```
 
 Called when a player moves:
-```player.move: (int UID, object Player_Variables) //See next section```
+
+```javascript
+player.move: (int UID, object Player_Variables) //See next section
+```
 
 Called when a player "updates", either shape or color:
-```player.update: (int UID, object Player_Variables) //See next section```
+
+```javascript
+player.update: (int UID, object Player_Variables) //See next section
+```
 
 Called when needing to hide a player:
-```player.hide: (int UID, object Player_Variables) //See next section```
+
+```javascript
+player.hide: (int UID, object Player_Variables) //See next section
+```
 
 Called when removing a player(READ: Leave):
-```player.remove: (int UID, object Player_Variables) //See next section```
+
+```javascript
+player.remove: (int UID, object Player_Variables) //See next section
+```
 
 Called when the server tries to move our camera, except we don't really have one:
-```camera: (object {X: integer X, Y: Integer Y})```
+
+```javascript
+camera: (object {X: integer X, Y: Integer Y})
+```
 
 Called when a object is at our feet:
-```feet: (integer Object_ID)```
+
+```javascript
+feet: (integer Object_ID)
+```
 
 Called when we have a object in our paws:
-```paws: (integer Object_ID)```
+
+```javascript
+paws: (integer Object_ID)
+```
 
 Called when messages are supposed to be suppressed:
-```suppress: None```
+
+```javascript
+suppress: None
+```
 
 Called when messages are to be resumed:
-```resume: None```
+
+```javascript
+resume: None
+```
 
 Called when a sound is supposed to play:
-```snd: (integer Sound_ID)```
+
+```javascript
+snd: (integer Sound_ID)
+```
 
 Called when we receive a disconnect dialog, such as getting banned(E.G.: Goodbye.)
-```disconnectdiag: (string Message)```
+```javascript
+disconnectdiag: (string Message)
+```
 
 Called when we find our UID:
-```uid: (integer UID)```
+
+```javascript
+uid: (integer UID)
+```
 
 Called when we detect a uploaded dream:
-```dream: (object {X: integer X, Y: integer Y}, string Uploader, string Caption)```
+
+```javascript
+dream: (object {X: integer X, Y: integer Y}, string Uploader, string Caption)
+```
 
 Called when music is supposed to play:
-```music: (integer Music_ID)```
+
+```javascript
+music: (integer Music_ID)
+```
 
 Called when we are supposed to load a dream's file:
-```dreampackage: (string Name, String Checksum)```
+
+```javascript
+dreampackage: (string Name, String Checksum)
+```
 
 Called when we need to load a patch:
-```patch: (string Name, string Checksum)```
+
+```javascript
+patch: (string Name, string Checksum)
+```
 
 Called when a dream unloads:
-```undream: (object {X: integer X, Y: integer Y})```
+
+```javascript
+undream: (object {X: integer X, Y: integer Y})
+```
 
 Called when we are authorized to upload:
-```upload.begin: None```
+
+```javascript
+upload.begin: None
+```
 
 Called when we are supposed to send our version:
-```get.version: None```
+
+```javascript
+get.version: None
+```
 
 Called when we need to update:
-```update: None```
+
+```javascript
+update: None
+```
 
 Called after calling uid:
-```uid2: (Integer UID)```
+
+```javascript
+uid2: (Integer UID)
+```
 
 Called when special effects are supposed to play(READ: Dragon breath and such):
-```vfx: (string FX, object {X: integer X, Y: integer Y})```
 
-Called when we can share edit:```share-edit.begin```
+```javascript
+vfx: (string FX, object {X: integer X, Y: integer Y})
+```
 
-Called when we can no longer share edit:```share-edit.end```
+Called when we can share edit:
 
-Called when tabsability changes(EG: Tabs key usage)```tabs: (integer True/False)```
+```javascript
+share-edit.begin
+```
 
-Called when viewing user list ability changes:```userlist: (integer True/False)```
+Called when we can no longer share edit:
 
-Called when we need to add a bookmark:```bookmark: (integer Temporary, string DreamURL)```
+```javascript
+share-edit.end
+```
 
-Called when a player has a offset:```offset: (integer UID, object {X: integer X, Y: integer Y})```
+Called when tabsability changes(EG: Tabs key usage)
+```javascript
+tabs: (integer True/False)
+```
 
-Called when particles are supposed to display, currently no function to download/process the data:```pfx: None```
+Called when viewing user list ability changes:
 
-Called when a dream has a webmap:```webmap: (string Map_Name, String URL)```
+```javascript
+userlist: (integer True/False)
+```
 
-Called when a portrait loads:```portrait: (integer UID, integer Portrait_ID)```
+Called when we need to add a bookmark:
 
-Called when we are supposed to open a URL:```openurl: (string URL)```
+```javascript
+bookmark: (integer Temporary, string DreamURL)
+```
 
-Called when the parental dialog displays:```parental: None```
+Called when a player has a offset:
 
-Called when we receive a online status request:```onln: (integer True/False, string Name)```
+```javascript
+offset: (integer UID, object {X: integer X, Y: integer Y})
+```
 
-Called when the screen flips:```flipscreen: (integer True/False)```
+Called when particles are supposed to display, currently no function to download/process the data:
 
-Called when our Session ID is set:```sessionid: (integer SID)```
+```javascript
+pfx: None
+```
 
-Called when our colors change:```colors: (string Color_String)```
+Called when a dream has a webmap:
 
-Called when we get a popup, such as cookie request:```popup: (string ID, string Type, string Message)```
+```javascript
+webmap: (string Map_Name, String URL)
+```
 
-Called WHENEVER we receive a packet:```data: (string Data)```
+Called when a portrait loads:
 
-Called when the connection dies, rip in piece:```end: None```
+```javascript
+portrait: (integer UID, integer Portrait_ID)
+```
+
+Called when we are supposed to open a URL:
+
+```javascript
+openurl: (string URL)
+```
+
+Called when the parental dialog displays:
+
+```javascript
+parental: None
+```
+
+Called when we receive a online status request:
+
+```javascript
+onln: (integer True/False, string Name)
+```
+
+Called when the screen flips:
+
+```javascript
+flipscreen: (integer True/False)
+```
+
+Called when our Session ID is set:
+
+```javascript
+sessionid: (integer SID)
+```
+
+Called when our colors change:
+
+```javascript
+colors: (string Color_String)
+```
+
+Called when we get a popup, such as cookie request:
+
+```javascript
+popup: (string ID, string Type, string Message)
+```
+
+Called WHENEVER we receive a packet:
+
+```javascript
+data: (string Data)
+```
+
+Called when the connection dies, rip in piece:
+
+```javascript
+end: None
+```
 
 ##Data structures:
 Positions:
-```{
+
+```javascript
+{
 	X: integer X,
 	Y: integer Y
-}```
+}
+```
 
 Player info:
-```{
+
+```javascript
+{
 	x: integer X,
 	y: integer Y,
 	shape: integer Shape,
@@ -236,11 +514,12 @@ Player info:
 	colors: string Color_Code,
 	flags: integer Flags,
 	afk: integer Afk
-}```
+}
+```
 
 ##Misc functions:
 These are used internally, but may be useful somehow, and are exposed to the user
-```
+```javascript
 integer bot.util.b95d(base_95);
 integer bot.util.b220d(base_220);
 object bot.util.process_PS(PS_String);
