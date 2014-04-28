@@ -158,8 +158,14 @@ bot.getDreamVar.wallAt(integer X, integer Y);
 ```
 
 ##Event list
-THESE ARE ALL LOWER CASE
-
+####THESE ARE ALL LOWER CASE
+For an example of how this is used, here is a simple `player.spawn` event trigger:
+```javascript
+bot.on("player.spawn", function(UID, PlayerData){ //Player data reference is in the next section
+    bot.whisper(PlayerData.name, "Hello, "+PlayerData.name+"! Welcome to my dream!");
+});
+```
+---
 Called when connecting:
 
 ```javascript
