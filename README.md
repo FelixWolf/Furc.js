@@ -1,7 +1,7 @@
 Furc.js
 =======
 
-A way to write bots for furcadia using node.js.
+A set of node.js APIs for use with Furcadia.
 
 ##Install
 * Git Clone it, Download the zip from the sidebar, or from my website: http://wolf.it.cx/furcadia/furc.js/download

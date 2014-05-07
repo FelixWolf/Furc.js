@@ -1,5 +1,6 @@
 {
-	"name"	: "Furc.js",
-	"author": "Félix Wolf",
-	"main"	: "./lib/main.js"
+	"name"		: "Furc.js",
+	"author"	: "Félix Wolf",
+	"main"		: "./lib/main.js",
+	"version"	: 0.9
 }

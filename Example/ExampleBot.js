@@ -1,4 +1,4 @@
-var furc = require("../Furc.js"), //If you put furc.js in the same folder, remember to change "../furc.js" to "./furc.js"!
+var furc = require("../Furc.js").client, //If you put furc.js in the same folder, remember to change "../furc.js" to "./furc.js"!
     cli = require("./cli.js"), prompt="> "; //This line is not part of furc.js, it just opens the CLI ability.
 
 input = cli.open("> ", false); //Also part of CLI, not really needed
