@@ -40,7 +40,7 @@ var
 					result.method="get";
 					if(tmp[2]=="result"&&tmp[3]!="<empty>"){
 						tmp = tmp.splice(3).join(": ").split(", ");
-						result.results={};
+						result.results={kv:{},iv:{}};
 						for(var i=0;i<tmp.length;i++){
 							var tmp2=tmp[i].replace("'","").split("=");
 							result.results.kv[tmp2[0]]=tmp2[1];
