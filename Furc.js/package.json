@@ -1,6 +1,13 @@
 {
-	"name"		: "Furc.js",
-	"author"	: "Félix Wolf",
-	"main"		: "./lib/main.js",
-	"version"	: 0.9
+	"name"			: "furc.js",
+	"version"		: "0.2.2",
+	"description"	: "A API thing to connect a bot/client to furcadia, and more!",
+	"author"		: "Félix Wolf",
+	"main"			: "./lib/main.js",
+	"keywords"		: ["Furcadia","Furc","Bot"],
+	"repository" 	: {
+		"type"	: "git",
+		"url"	: "https://github.com/FelixWolf/Furc.js.git"
+	},
+	"license"		: "MIT"
 }
