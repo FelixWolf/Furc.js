@@ -1,3 +1,4 @@
+[![NPM version](https://badge.fury.io/js/furc.js.svg)](http://badge.fury.io/js/furc.js)
 Furc.js
 =======
 
