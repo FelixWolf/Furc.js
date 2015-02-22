@@ -1,4 +1,10 @@
 [![NPM version](https://badge.fury.io/js/furc.js.svg)](http://badge.fury.io/js/furc.js)
+
+Notice
+=======
+This was written originally as a private script, while bots are allowed on Furcadia(Provided they stay within the ToS), this script isn't written very well.
+I need to rewrite it, and I will soon, but it is not in my priority as it is a under-used script.
+
 Furc.js
 =======
 
