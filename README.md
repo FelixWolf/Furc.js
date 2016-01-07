@@ -2,6 +2,7 @@
 
 Notice
 =======
+This project is no longer being worked on as I have decided to move to python. You are free to fork and fix this up if you wish.
 This was written originally as a private script, while bots are allowed on Furcadia(Provided they stay within the ToS), this script isn't written very well.
 I need to rewrite it, and I will soon, but it is not in my priority as it is a under-used script.
 
